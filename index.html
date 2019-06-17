@@ -1,0 +1,39 @@
+<html>
+<style>
+    .login_image {
+        max-height: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin: 5em;
+    }
+    
+    .login_image img {
+        height: 6em;
+        border-radius: 100px;
+    }
+</style>
+
+<body>
+
+    <div id="LoginWithPG" class="login">
+        <div class="login_image">
+            <img src="https://www.workfromhomedata.com/images/login-btn.png" alt>
+        </div>
+    </div>
+</body>
+
+<script type="text/javascript" src="https://unpkg.com/jso/dist/jso.js"></script>
+<script type="text/javascript">
+    let config = {
+        response_type: 'code',
+        client_id: "CtH2uIW608WiRah3rhU5R8EX2AGXKHlA0HDDLnrv",
+        authorization: "https://api.pgsmartshopassistant.com/o/authorize/",
+        redirect_uri: "http://localhost:8080/"
+    }
+    let client = new jso.JSO(config)
+    document.getElementById('LoginWithPG').onclick = function() {
+        client.getToken()
+    };
+</script>
+
+</html>
