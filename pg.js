@@ -1,5 +1,5 @@
 var imported = document.createElement('script');
-imported.src = './js/jso.js';
+imported.src = './jso.js';
 document.head.appendChild(imported);
 
 
