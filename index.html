@@ -14,7 +14,6 @@
 </style>
 
 <body>
-
     <div id="LoginWithPG" class="login">
         <div class="login_image">
             <img src="https://www.workfromhomedata.com/images/login-btn.png" alt>
@@ -22,17 +21,17 @@
     </div>
 </body>
 
-<script type="text/javascript" src="https://unpkg.com/jso/dist/jso.js"></script>
-<script type="text/javascript">
-    let config = {
-        response_type: 'code',
-        client_id: "CtH2uIW608WiRah3rhU5R8EX2AGXKHlA0HDDLnrv",
-        authorization: "https://api.pgsmartshopassistant.com/o/authorize/",
-        redirect_uri: "http://localhost:8080/"
-    }
-    let client = new jso.JSO(config)
+<script type="text/javascript" src="./js/pg.js"></script>
+<script>
     document.getElementById('LoginWithPG').onclick = function() {
-        client.getToken()
+        /* create PG sdk instance */
+        let pg = new PG();
+        /* set  OAuth 2 Client ID */
+        pg.setClientId('CtH2uIW608WiRah3rhU5R8EX2AGXKHlA0HDDLnrv');
+        /* set  OAuth 2 RedirectUrl */
+        pg.setRedirectUrl('http://localhost:8080/');
+        /* Initialize */
+        pg.Init();
     };
 </script>
 
