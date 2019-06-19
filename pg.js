@@ -1,8 +1,3 @@
-var imported = document.createElement('script');
-imported.src = './jso.js';
-document.head.appendChild(imported);
-
-
 var config = {
     response_type: 'code',
     client_id: '',
