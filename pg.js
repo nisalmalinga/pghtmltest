@@ -1,5 +1,5 @@
 var imported = document.createElement('script');
-imported.src = './jso.js';
+imported.src = './js/jso.js';
 document.head.appendChild(imported);
 
 
@@ -9,6 +9,7 @@ var config = {
     authorization: 'https://api.pgsmartshopassistant.com/o/authorize/',
     redirect_uri: ''
 }
+
 
 let CODE = new URLSearchParams(window.location.search).get('code');
 let CLIENT_ID = "CtH2uIW608WiRah3rhU5R8EX2AGXKHlA0HDDLnrv";
@@ -38,7 +39,7 @@ class PG {
 
     getTokens() {
         var http = new XMLHttpRequest();
-        var params = 'grant_type=authorization_code&code=' + CODE + '&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&redirect_uri=http://localhost:8080/';
+        var params = 'grant_type=authorization_code&code=' + CODE + '&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET;
         http.open('POST', URL, true);
 
         //Send the proper header information along with the request
