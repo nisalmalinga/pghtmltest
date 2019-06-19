@@ -34,7 +34,7 @@ class PG {
 
     getTokens() {
         var http = new XMLHttpRequest();
-        var params = 'grant_type=authorization_code&code=' + CODE + '&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET+ '&redirect_uri=https://nisalmalinga.github.io/pghtmltest/';
+        var params = 'grant_type=authorization_code&code=' + CODE + '&client_id=' + CLIENT_ID + '&client_secret=' + CLIENT_SECRET + '&redirect_uri=' + config.redirect_uri;
         http.open('POST', URL, true);
 
         //Send the proper header information along with the request
